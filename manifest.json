@@ -1,0 +1,43 @@
+{
+    "name": "__MSG_appName__",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "__MSG_appDesc__",
+    "default_locale": "ja",
+    "homepage_url": "https://github.com/hidao80/misskey-utils/",
+    "icons": {
+        "256": "img/icon_256.png"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "js/FediverseTicker.js",
+                "js/KeywordsFilter.js",
+                "js/NotesSpeech.js",
+                "js/NotificationBeepInDeck.js",
+                "js/TimeToAbsolute.js",
+                "js/app.js"
+            ],
+            "css": [
+                "css/popup.css"
+            ],
+            "html": [
+                "html/popup.html"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "__MSG_appName__",
+        "default_icon": "img/icon_256.png",
+        "default_popup": "html/popup.html"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ]
+}

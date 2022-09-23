@@ -1,0 +1,81 @@
+/* Read from popup.html */
+body.dc6a3b0594269eefaeb {
+    width: 300px;
+}
+
+/* iOS-style toggle switch */
+.dc6a3b0594269eefaeb .checkbox_wrap {
+    height: 25px;
+    position: relative;
+    width: 100%;
+}
+
+.dc6a3b0594269eefaeb input[type='checkbox'] {
+    display: none;
+}
+
+.dc6a3b0594269eefaeb label {
+    width: 25px;
+    height: 17.5px;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+
+.dc6a3b0594269eefaeb input[type='checkbox']+label {
+    background: lightgray;
+}
+
+.dc6a3b0594269eefaeb input[type='checkbox']:checked+label {
+    background: #4BD865;
+}
+
+/* switch foreground */
+.dc6a3b0594269eefaeb label:before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background: white;
+    left: 2.5px;
+    top: 2px;
+    box-sizing: border-box;
+    color: black;
+    border-radius: 100px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+    transition: .3s;
+}
+
+.dc6a3b0594269eefaeb input[type=checkbox]:checked+label:before {
+    left: 10px;
+}
+
+.dc6a3b0594269eefaeb label span {
+    width: 100vw;
+    position: relative;
+    float: left;
+    position: absolute;
+    left: calc(100% + 15px);
+    top: -3px;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+/*  */
+.dc6a3b0594269eefaeb .pt-3 {
+    padding-top: 1rem;
+}
+
+.dc6a3b0594269eefaeb #domain_list_title {
+    font-size: 0.9rem;
+}
+
+.dc6a3b0594269eefaeb textarea {
+    width: 93vw;
+    height: calc(1.3em * 5);
+    line-height: 1.3;
+}
