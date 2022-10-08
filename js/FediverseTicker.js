@@ -16,10 +16,8 @@ function FediverseTicker() {
     }`,
     ];
 
-    const usableSheet = [...document.styleSheets].slice(-1)[0];
-
     for (let style of styles) {
-        usableSheet.insertRule(style, usableSheet.cssRules.length);
+        document.styleSheets[0].insertRule(style);
     }
 
     function showTicker(note) {
