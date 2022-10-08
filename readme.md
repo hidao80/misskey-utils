@@ -1,4 +1,5 @@
 [![License](https://img.shields.io/github/license/hidao80/misskey-utils)](/LICENSE)
+[![eslint](https://github.com/hidao80/misskey-utils/actions/workflows/eslint.yml/badge.svg)](https://github.com/hidao80/misskey-utils/actions/workflows/eslint.yml)
 
 # How to Install
 
