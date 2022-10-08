@@ -1,0 +1,29 @@
+{
+    "appName": {
+        "message": "Misskeyユーティリティ"
+    },
+    "appDesc": {
+        "message": "Misskeyを便利に使うユーティリティ集です。"
+    },
+    "Time_to_absolute": {
+        "message": "絶対時刻"
+    },
+    "Note_speech": {
+        "message": "note読み上げ"
+    },
+    "Fediverse_ticker": {
+        "message": "ティッカー"
+    },
+    "Keywords_filter": {
+        "message": "キーワードフィルター"
+    },
+    "Notification_beep_in_deck": {
+        "message": "通知音"
+    },
+    "Edit_target_domain_list": {
+        "message": "対象ドメインリストの編集"
+    },
+    "Reload_to_activate": {
+        "message": "有効にするにはリロードしてください。"
+    }
+}

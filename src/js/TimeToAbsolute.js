@@ -1,7 +1,7 @@
 /**
  * UserScript to add absolute notation to Fediverse's posting time.
  */
-function TimeToAbsolute() {
+export default function TimeToAbsolute() {
     const styles = [
         // not post-column
         `article time::before {
@@ -70,10 +70,8 @@ function TimeToAbsolute() {
 
     // Style is a later winner, so send and add
     setTimeout(() => {
-        const usableSheet = [...document.styleSheets].slice(-1)[0];
-
         for (let style of styles) {
-            usableSheet.insertRule(style, usableSheet.cssRules.length);
+            document.styleSheets[0].insertRule(style);
         }
     }, 500);
 }

@@ -1,9 +1,9 @@
 /**
  * UserScript that sounds a notification sound even when the deck is displayed in Misskey.
  */
-function NotificationBeepInDeck() {
+export default function NotificationBeepInDeck() {
     // Sound when notifications come in.
-    const timer = setInterval(v => {
+    const timer = setInterval(() => {
         // Designation of lanes to watch for posts
         const elment = document.querySelector(".transition.notifications");
 
@@ -11,7 +11,6 @@ function NotificationBeepInDeck() {
             clearInterval(timer);
 
             const button = document.createElement('div');
-            button.textContent = '🔔Start🔔';
             button.style.cssText = `
             position: fixed;
             right: 10px;
@@ -25,7 +24,8 @@ function NotificationBeepInDeck() {
             border-radius: 50%;
             box-shadow: 0 2px 10px -6px rgba(0,0,0,.5), 0 3px 10px -4px rgba(0,0,0,.2);
             z-index: 10000;
-        `;
+            `;
+            button.textContent = '🔔Start🔔';
             document.body.appendChild(button);
 
             let beep = null;
@@ -37,8 +37,8 @@ function NotificationBeepInDeck() {
 
                 // Browser specifications do not allow sound to be played unless
                 // the button in the screen is operated more than once.
-                (new MutationObserver(v => beep.play())).observe(elment, { childList: true });
-            }
+                (new MutationObserver(() => beep.play())).observe(elment, { childList: true });
+            };
         }
     }, 500);
 }

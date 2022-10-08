@@ -1,7 +1,7 @@
 /**
  * UserScript to read out Misskey's social timeline using the Speech API.
  */
-function NotesSpeech() {
+export default function NotesSpeech() {
     // Initialization of reading voice
     const synth = window.speechSynthesis;
     const WIN = "Kyoko";

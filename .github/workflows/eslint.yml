@@ -1,0 +1,36 @@
+name: eslint
+on:
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          php-version: 16
+
+      - uses: actions/cache@v3
+        id: node_modules_cache_id
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+
+      - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+        run: npm i -D eslint eslint-plugin-jsonc@latest @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v31
+        with:
+          files: js/**
+
+      - run: npx eslint ${{ steps.changed-files.outputs.all_changed_files }}
+      # - run: npx eslint js/* js/lib/*

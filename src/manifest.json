@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest_version": 3,
     "description": "__MSG_appDesc__",
     "default_locale": "ja",
@@ -12,21 +12,10 @@
         {
             "run_at": "document_end",
             "matches": [
-                "*://*/*"
+                "<all_urls>"
             ],
             "js": [
-                "js/FediverseTicker.js",
-                "js/KeywordsFilter.js",
-                "js/NotesSpeech.js",
-                "js/NotificationBeepInDeck.js",
-                "js/TimeToAbsolute.js",
                 "js/app.js"
-            ],
-            "css": [
-                "css/popup.css"
-            ],
-            "html": [
-                "html/popup.html"
             ]
         }
     ],
@@ -37,7 +26,16 @@
     },
     "permissions": [
         "storage",
-        "activeTab",
         "scripting"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "js/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
     ]
 }

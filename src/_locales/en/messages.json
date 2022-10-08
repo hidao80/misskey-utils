@@ -1,0 +1,29 @@
+{
+    "appName": {
+        "message": "Misskey Utilities"
+    },
+    "appDesc": {
+        "message": "This is a collection of utilities that make Misskey useful.."
+    },
+    "Time_to_absolute": {
+        "message": "Time to absolute"
+    },
+    "Note_speech": {
+        "message": "Note speech"
+    },
+    "Fediverse_ticker": {
+        "message": "Ticker"
+    },
+    "Keywords_filter": {
+        "message": "Keywords filter"
+    },
+    "Notification_beep_in_deck": {
+        "message": "Notification beep"
+    },
+    "Edit_target_domain_list": {
+        "message": "Edit target domain list"
+    },
+    "Reload_to_activate": {
+        "message": "Reload to activate."
+    }
+}

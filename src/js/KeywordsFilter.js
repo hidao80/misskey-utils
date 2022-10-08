@@ -1,7 +1,7 @@
 /**
  * Filter out offensive words.
  */
-function KeywordsFilter() {
+export default function KeywordsFilter() {
     const FILTERED_WORDS = "■■■";
 
     const KEYWORDS = [

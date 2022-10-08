@@ -1,19 +1,19 @@
 /**
  * Display the server to which the contributor belongs in an easily viewable manner.
  */
-function FediverseTicker() {
+export default function FediverseTicker() {
     const CHARACTER = "abcdefghijklmnopqrstuvwxyz-_.,/?&%=[]0123456789";
     const CLASS_NAME = "fediverse-ticker";
 
     const styles = [
         `.${CLASS_NAME} span {
-        display: inline-block;
-        color: #FFF;
-        font-weight:600;
-        padding: 0 0.5rem;
-        margin-bottom: 0.25rem;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
-    }`,
+    display: inline-block;
+    color: #FFF;
+    font-weight:600;
+    padding: 0 0.5rem;
+    margin-bottom: 0.25rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
+}`,
     ];
 
     for (let style of styles) {
