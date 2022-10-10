@@ -25,5 +25,11 @@
     },
     "Reload_to_activate": {
         "message": "有効にするにはリロードしてください。"
+    },
+    "Read_out_timeline": {
+        "message": "ソーシャル"
+    },
+    "their_note": {
+        "message": "さんのノート。"
     }
 }

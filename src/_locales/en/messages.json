@@ -25,5 +25,11 @@
     },
     "Reload_to_activate": {
         "message": "Reload to activate."
+    },
+    "Read_out_timeline": {
+        "message": "Social"
+    },
+    "their_note": {
+        "message": "'s note."
     }
 }
