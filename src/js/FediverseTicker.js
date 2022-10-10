@@ -17,7 +17,7 @@ export default function FediverseTicker() {
     ];
 
     for (let style of styles) {
-        document.styleSheets[0].insertRule(style);
+        document.styleSheets[0]?.insertRule(style);
     }
 
     function showTicker(note) {
